@@ -1,0 +1,49 @@
+<div class="login-box">
+    <div class="login-logo">
+        <h2><b>Login</b></h2>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">Inicio de sesión</p>
+            <hr>
+
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Usuario" formControlName="usuario">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <!-- /.input-group-append -->
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+                <!-- /.input-group -->
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Contraseña" formControlName="clave">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <i class="bi bi-lock"></i>
+                        </div>
+                        <!-- /.input-group-append -->
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+                <!-- /.input-group -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </form>
+            <!-- /.login-card-body -->
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+    <!-- /.login-card -->
+</div>
+<!-- /.login-box -->
