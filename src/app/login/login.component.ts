@@ -10,13 +10,19 @@ import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angu
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  
-  constructor(private fb: FormBuilder) { 
 
-  }
+
+  constructor(private fb: FormBuilder) {
+    
+  } 
 
   login(){
-    
+    if(this.usuario?.value?.toLocaleLowerCase()=='admin' && this.clave?.value?.toLocaleLowerCase()=='1234'){
+      console.log('Login correcto');
+      
+    }else{
+      console.log('Login incorrecto');
+    }
   }
 
   get usuario() {
