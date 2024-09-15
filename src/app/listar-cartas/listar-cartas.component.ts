@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-listar-cartas',
@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './listar-cartas.component.css'
 })
 export class ListarCartasComponent {
+
+  @Input() cantidad?: number;
+
    cargarCartas(){
     let table = document.querySelector('#cartas');
     let html = '';
@@ -26,12 +29,14 @@ export class ListarCartasComponent {
                    <td>${cards[i].cantidad}</td>
                    </tr>`;
         }
-
         table!.innerHTML = html;
+
+        cards[1].cantidad+= 1;
       }
     }
   }
 
+  
 
   constructor() {}
 

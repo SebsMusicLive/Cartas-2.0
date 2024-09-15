@@ -10,5 +10,47 @@ import { AdicionarElementoComponent } from "../adicionar-elemento/adicionar-elem
   styleUrl: './cartas.component.css'
 })
 export class CartasComponent {
+  cantidad: number = 0;
+  sumarCarta1(){
+    this.cantidad++;
+  }
+
+  sumarCarta2(){
+    
+  }
+
+  sumarCarta3(){
   
+  }
+  sumarCarta4(){
+    
+  }
+  sumarCarta5(){
+    
+  }
+  sumarCarta6(){
+    
+  }
+  sumarCarta7(){
+    
+  }
+  sumarCarta8(){
+    
+  }
+  sumarCarta9(){
+    
+  }
+  sumarCarta10(){
+    
+  }
+  sumarCarta11(){
+    
+  }
+  sumarCarta12(){
+    
+  }
+
+  sumarCarta13(){
+    
+  }
 }

@@ -6,28 +6,28 @@
     </div>
 
     <div class="row pt-2">
-        <img src="assets/img/1.png" alt="">
-        <img src="assets/img/2.png" alt="">
-        <img src="assets/img/3.png" alt="">
-        <img src="assets/img/4.png" alt="">
-        <img src="assets/img/5.png" alt="">
-        <img src="assets/img/6.png" alt="">
+        <img src="assets/img/1.png" alt="" (click)="sumarCarta1()" style="cursor:pointer">
+        <img src="assets/img/2.png" alt="" (click)="sumarCarta2()" style="cursor:pointer">
+        <img src="assets/img/3.png" alt="" (click)="sumarCarta3()" style="cursor:pointer">
+        <img src="assets/img/4.png" alt="" (click)="sumarCarta4()" style="cursor:pointer">
+        <img src="assets/img/5.png" alt="" (click)="sumarCarta5()" style="cursor:pointer">
+        <img src="assets/img/6.png" alt="" (click)="sumarCarta6()" style="cursor:pointer">
     </div>
     <div class="row pt-3">
-        <img src="assets/img/7.png" alt="">
-        <img src="assets/img/8.png" alt="">
-        <img src="assets/img/9.png" alt="">
-        <img src="assets/img/10.png" alt="">
-        <img src="assets/img/11.png" alt="">
-        <img src="assets/img/12.png" alt="">
+        <img src="assets/img/7.png" alt="" (click)="sumarCarta7()" style="cursor:pointer">
+        <img src="assets/img/8.png" alt="" (click)="sumarCarta8()" style="cursor:pointer">
+        <img src="assets/img/9.png" alt="" (click)="sumarCarta9()" style="cursor:pointer">
+        <img src="assets/img/10.png" alt="" (click)="sumarCarta10()" style="cursor:pointer">
+        <img src="assets/img/11.png" alt="" (click)="sumarCarta11()" style="cursor:pointer">
+        <img src="assets/img/12.png" alt="" (click)="sumarCarta12()" style="cursor:pointer">
     </div>
     <div class="row pt-3 ">
-        <img src="assets/img/13.png" alt="">
+        <img src="assets/img/13.png" alt="" (click)="sumarCarta13()" style="cursor:pointer">
     </div>
 
 </div>
 
 <div class="container d-flex justify-content-center">
-    <app-listar-cartas class="w-50 p-3"/>
-    <app-adicionar-elemento class="w-50 p-3"/>
+    <app-listar-cartas class="w-50 p-3" [cantidad]="cantidad"/>
+    <app-adicionar-elemento class="w-50 p-3" />
 </div>
