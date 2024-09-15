@@ -18,10 +18,12 @@ export class LoginComponent {
 
   login(){
     if(this.usuario?.value?.toLocaleLowerCase()=='admin' && this.clave?.value?.toLocaleLowerCase()=='1234'){
-      console.log('Login correcto');
-      
+      location.href = '/cartas';
+      localStorage.setItem('Usuario', this.usuario?.value);
+      localStorage.setItem('Clave', this.clave?.value);
     }else{
-      console.log('Login incorrecto');
+      location.href = '/login';
+      alert('Datos incorrectos');
     }
   }
 
