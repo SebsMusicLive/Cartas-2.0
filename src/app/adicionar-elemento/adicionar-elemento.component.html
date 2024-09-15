@@ -1,1 +1,21 @@
-<p>adicionar-elemento works!</p>
+<form action="" method="post" [formGroup]="adicionarForm" (ngSubmit)="adicionar()">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-12 mt-3">
+                <label for="numero">Número</label>
+                <input type="text" class="form-control" placeholder="Número" formControlName="numero">
+            </div>            
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <label for="numero">Carta</label>
+                <input type="text" class="form-control" placeholder="Carta" formControlName="carta">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <button class="btn btn-primary" [disabled]="!adicionarForm.valid"><i class="bi bi-floppy"></i>  Guardar</button>
+            </div>
+        </div>
+    </div>
+</form>

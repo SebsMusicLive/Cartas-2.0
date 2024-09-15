@@ -8,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrl: './listar-cartas.component.css'
 })
 export class ListarCartasComponent {
+   cargarCartas(){
+    let table = document.querySelector('#cartas');
+    let html = '';
 
+    const xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'assets/data.json', true);
+    xhttp.send();
+    xhttp.onreadystatechange= function() {
+      if(this.readyState == 4 && this.status == 200) {
+        let cards = JSON.parse(this.responseText);
+        
+        for (let i = 0; i < cards.length; i++) {
+          html += `<td>${cards[i].numero}</td>
+                   <td>${cards[i].carta}</td>
+                   <td>${cards[i].cantidad}</td>`;
+        }
+
+        table!.innerHTML = html;
+      }
+    }
+  }
+
+
+  constructor() {
+    this.cargarCartas();
+  }
 }
+
