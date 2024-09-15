@@ -20,9 +20,11 @@ export class ListarCartasComponent {
         let cards = JSON.parse(this.responseText);
         
         for (let i = 0; i < cards.length; i++) {
-          html += `<td>${cards[i].numero}</td>
+          html += `<tr>
+                   <td>${cards[i].numero}</td>
                    <td>${cards[i].carta}</td>
-                   <td>${cards[i].cantidad}</td>`;
+                   <td>${cards[i].cantidad}</td>
+                   </tr>`;
         }
 
         table!.innerHTML = html;
@@ -31,7 +33,9 @@ export class ListarCartasComponent {
   }
 
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(){
     this.cargarCartas();
   }
 }
